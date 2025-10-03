@@ -2,20 +2,21 @@
 document.getElementById('login-btn')
     .addEventListener('click', function(e){
         e.preventDefault();
-        
-        const mobileNumber = 12345678910;
-        const pinNumber = 1234;
 
-        const getNumber = document.getElementById('number').value;
-        const convertedGetNumber =parseInt(getNumber);
-        const getPin = document.getElementById('pin').value;
-        const convertedGetPin = parseInt(getPin);
-        
-        if(convertedGetNumber === mobileNumber && convertedGetPin === pinNumber){
-            window.location.href = "./home.html";
+        const number = 12345678910;
+        const pin = 1234;
+         
+        const inputNumber = document.getElementById('number').value;
+        const convertedNumber = Number(inputNumber);
+
+        const inputPin = document.getElementById('pin').value;
+        const convertedInputPin = Number(inputPin);
+
+        if(convertedNumber === number && convertedInputPin === pin){
+            window.location.href = "home.html";
         }
         else{
-            alert('invaild credentials');
+            alert('Please provide valid number & pin');
         }
-
+        
     })

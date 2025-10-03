@@ -1,25 +1,38 @@
- <div class="latest-payment max-w-lg mx-auto">
-        <div class="flex justify-between mt-7">
-            <h1 class="font-semibold text-[#080808e6] text-[1.13rem]">Latest Payment</h1>
-            <h1 class="text-sm text-[#666768]">View All</h1>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
 
-        <div class="card-container">
-            <div class="card bg-white flex flex-row p-3 rounded-xl border-[1px] border-gray-200">
-                <div>
-                    <div class="img-container bg-[#0808080d] w-11 h-11 rounded-[50%] flex justify-center items-center">
-                        <img src="./assets/wallet1.png" alt="">
-                    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
 
-                    <div class="card-content ml-2">
-                        <h2 class="font-semibold text-[#080808b3]">Electricity Bill</h2>
-                        <p class="text-[#080808b3] text-[12px]"> Today 01:44 AM</p>
-                    </div>
-                </div>
+<body>
+    <h1>Welcome to Practice File</h1>
 
-                <div>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
+    <h2>Your poient is: <span id="poient">0</span></h2>
+    <button id="button-1">button 1</button>
+    <button id="button-2">button 2</button>
+    <button id="button-3">button 3</button>
+
+   <script>
+    function getPoient(num){
+        document.getElementById('poient').innerText = num;
+    }
+
+    document.getElementById('button-1')
+        .addEventListener('click', function(){
+            getPoient(1)
+        })
+    document.getElementById('button-2')
+        .addEventListener('click', function(){
+           getPoient(2)
+        })
+    document.getElementById('button-3')
+        .addEventListener('click', function(){
+           getPoient('3')
+        })
+   </script>
+</body>
+
+</html>
