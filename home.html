@@ -40,29 +40,35 @@
         </div>
 
         <div class=" grid grid-cols-3 gap-4  mt-6 pb-5 px-5 ">
-            <div id="get-addmoney-form" class="border-[1.5px] border-gray-300 text-center p-5 rounded-xl">
+            <div id="get-addmoney-form"
+                class="form-btn border-[1.5px] border-gray-300 text-[#080808b3] text-center p-5 rounded-xl">
                 <img src="./assets/wallet1.png" class="mx-auto" alt="">
-                <p class="mt-2 text-[14px] font-semibold text-[#080808b3]">Add Money</p>
+                <p class="mt-2 text-[14px] font-semibold ">Add Money</p>
             </div>
-            <div id="get-cashout-form" class="border-[1.5px] border-gray-300 text-center p-5 rounded-xl">
+            <div id="get-cashout-form"
+                class="form-btn border-[1.5px] border-gray-300 text-[#080808b3] text-center p-5 rounded-xl">
                 <img src="./assets/send1.png" class="mx-auto" alt="">
-                <p class="mt-2 text-[14px] font-semibold text-[#080808b3]">Cashout</p>
+                <p class="mt-2 text-[14px] font-semibold ">Cashout</p>
             </div>
-            <div id="get-transfer-money-form" class="border-[1.5px] border-gray-300 text-center p-5 rounded-xl">
+            <div id="get-transfer-money-form"
+                class="form-btn border-[1.5px] border-gray-300 text-[#080808b3] text-center p-5 rounded-xl">
                 <img src="./assets/money1.png" class="mx-auto" alt="">
-                <p class="mt-2 text-[14px] font-semibold text-[#080808b3]">Transfer Money</p>
+                <p class="mt-2 text-[14px] font-semibold ">Transfer Money</p>
             </div>
-            <div class="border-[1.5px] border-gray-300 text-center p-5 rounded-xl">
+            <div id="get-bonus-form"
+                class="form-btn border-[1.5px] border-gray-300 text-[#080808b3] text-center p-5 rounded-xl">
                 <img src="./assets/bonus1.png" class="mx-auto" alt="">
-                <p class="mt-2 text-[14px] font-semibold text-[#080808b3]">Get Bonus</p>
+                <p class="mt-2 text-[14px] font-semibold ">Get Bonus</p>
             </div>
-            <div class="border-[1.5px] border-gray-300 text-center p-5 rounded-xl">
+            <div id="get-pay-bill-form"
+                class="form-btn border-[1.5px] border-gray-300 text-[#080808b3] text-center p-5 rounded-xl">
                 <img src="./assets/purse1.png" class="mx-auto" alt="">
-                <p class="mt-2 text-[14px] font-semibold text-[#080808b3]">Pay Bill</p>
+                <p class="mt-2 text-[14px] font-semibold ">Pay Bill</p>
             </div>
-            <div class="border-[1.5px] border-gray-300 text-center p-5 rounded-xl">
+            <div id="get-transection-form"
+                class="form-btn border-[1.5px] border-gray-300 text-[#080808b3] text-center p-5 rounded-xl">
                 <img src="./assets/transaction1.png" class="mx-auto" alt="">
-                <p class="mt-2 text-[14px] font-semibold text-[#080808b3]">Transactions</p>
+                <p class="mt-2 text-[14px] font-semibold ">Transactions</p>
             </div>
         </div>
     </div>
@@ -73,8 +79,7 @@
         <form class="bg-white mt-3 p-7 rounded-3xl">
             <label for="add-bank" class="font-medium text-[#080808b3]">Select A Bank</label>
             <br>
-            <select id="add-bank"
-                class="select bg-[#f4f5f7] text-[#59595a] mt-3 pl-5 rounded-3xl w-[100%] h-12 ">
+            <select id="add-bank" class="select bg-[#f4f5f7] text-[#59595a] mt-3 pl-5 rounded-3xl w-[100%] h-12 ">
                 <option disabled selected>Select a bank</option>
                 <option>Islami Bank</option>
                 <option>Jamuna Bank</option>
@@ -89,7 +94,7 @@
 
             <div class="mt-4">
                 <label for="add-amount" class="font-semibold text-[#080808b3]">Amount to Add</label><br>
-                <input type="text" id="add-amount" placeholder="Add Amount to withdraw" 
+                <input type="text" id="add-amount" placeholder="Add Amount to withdraw"
                     class="input w-full h-12 bg-[#f4f5f7] mt-3 pl-5 rounded-3xl " />
             </div>
 
@@ -156,9 +161,79 @@
             </div>
 
             <button id="transfer-money-btn"
-                 class="btn mt-5 w-full h-12 bg-[#0874F2] rounded-3xl text-white text-xl font-semibold">Send Now</button>
+                class="btn mt-5 w-full h-12 bg-[#0874F2] rounded-3xl text-white text-xl font-semibold">Send Now</button>
         </form>
     </div>
+
+    <!----------------Get Bonus------------------ -->
+    <div id="bonus-form" class=" form max-w-lg mx-auto mt-8 p-5 hidden ">
+        <h1 class="font-semibold text-lg text-[#080808e6]">Get Bonus</h1>
+        <form class="bg-white mt-3 p-7 rounded-3xl">
+
+            <div class="mt-5">
+                <label for="bonus-coupon" class="font-semibold text-[#080808b3]">Enter Bonus Coupon</label><br>
+                <input type="text" id="bonus-coupon" placeholder="Enter your coupon"
+                    class="input bg-[#f4f5f7] mt-3 pl-5 rounded-3xl w-full h-12" />
+            </div>
+
+            <button id="bonus-btn"
+                class="btn mt-5 w-full h-12 bg-[#0874F2] rounded-3xl text-white text-xl font-semibold">Get
+                Bonus</button>
+        </form>
+    </div>
+
+    <!-----------------Pay Bill--------------------->
+    <div id="pay-bill-form" class="form max-w-lg mx-auto mt-8 p-5  hidden">
+        <h1 class="font-semibold text-lg text-[#080808e6]">Pay Bill</h1>
+        <form class="bg-white mt-3 p-7 rounded-3xl">
+            <label for="pay-bill" class="font-medium text-[#080808b3]">Select To Pay</label>
+            <br>
+            <select id="pay-bill" class="select bg-[#f4f5f7] text-[#59595a] mt-3 pl-5 rounded-3xl w-[100%] h-12 ">
+                <option disabled selected>Select Bill</option>
+                <option>Current Bill</option>
+                <option>Gass Bill</option>
+                <option>Washa Bill</option>
+            </select>
+
+            <div class="mt-4">
+                <label for="biller-account-number" class="font-semibold text-[#080808b3]">Biller Account
+                    Number</label><br>
+                <input type="text" id="biller-account-number" placeholder="Enter account number"
+                    class="input w-full h-12 bg-[#f4f5f7] mt-3 pl-5 rounded-3xl" />
+            </div>
+
+            <div class="mt-4">
+                <label for="pay-amount" class="font-semibold text-[#080808b3]">Amount to Pay</label><br>
+                <input type="text" id="pay-amount" placeholder="Add Amount to pay"
+                    class="input w-full h-12 bg-[#f4f5f7] mt-3 pl-5 rounded-3xl " />
+            </div>
+
+            <div class="mt-5">
+                <label for="bill-pin" class="font-semibold text-[#080808b3]">Pin Number</label><br>
+                <input type="text" id="bill-pin" placeholder="Enter 4 Digit Pin Number"
+                    class="input bg-[#f4f5f7] mt-3 pl-5 rounded-3xl w-full h-12" />
+            </div>
+
+            <button id="pay-bill-btn"
+                class="btn mt-5 w-full h-12 bg-[#0874F2] rounded-3xl text-white text-xl font-semibold">Pay Now</button>
+        </form>
+    </div>
+
+    <!-- -------------------Transection History---------- -->
+    <div id="transection-history" class=" form max-w-lg mx-auto mt-8 p-5 hidden ">
+        <div class="flex justify-between items-center">
+            <h1 class="font-semibold text-lg text-[#080808e6]">Transaction History</h1>
+            <p class="text-[#080808b3] text-[0.88rem]">View All</p>
+        </div>
+
+     <div id="transection-container">
+       
+     </div>
+
+    </div>
+
+
+
 
     <script src="./Script/home.js"></script>
 </body>
