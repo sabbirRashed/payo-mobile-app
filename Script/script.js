@@ -16,7 +16,12 @@ document.getElementById('login-btn')
             window.location.href = "home.html";
         }
         else{
-            alert('Please provide valid number & pin');
+            alert(`
+                
+                Mobile number: 012345678910
+                    Pin: 1234
+
+       NB: I show this for Programming Hero project checker`);
         }
         
     })

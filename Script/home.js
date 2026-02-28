@@ -124,6 +124,10 @@ document.getElementById('add-money-btn')
             alert('please provide valid pin number');
             return;
         }
+        if (addMoney <= 0) {
+            alert('Invalid amount');
+            return;
+        }
 
         const currentBallence = availavleBallance + addMoney;
         setInnerText(currentBallence);
@@ -159,6 +163,10 @@ document.getElementById('cashout-btn')
         if (cashoutPin !== validPin) {
             alert('please provide valid pin number');
             return
+        }
+        if (cashoutAmount <= 0 || cashoutAmount > oldBalance) {
+            alert('Invalid amount');
+            return;
         }
         const currentBalance = oldBalance - cashoutAmount;
         setInnerText(currentBalance);
@@ -272,8 +280,7 @@ document.getElementById('get-transection-form')
 
         for (const data of transectionData) {
             const div = document.createElement("div");
-            div.innerHTML = `
-            <div id="transection-container">
+            div.innerHTML = `   
                <div id="card" class=" max-w-lg mx-auto mt-8 p-4 bg-white rounded-xl flex justify-between items-center">
                     <div class="flex items-center">
                         <div id="image" class=" p-3 bg-[#f4f5f7] flex justify-center items-center rounded-full">
@@ -289,7 +296,6 @@ document.getElementById('get-transection-form')
                         <i class="fa-solid fa-ellipsis-vertical"></i>
                     </div>
                 </div>
-            </div>
             `
             transectionContainer.appendChild(div)
 
